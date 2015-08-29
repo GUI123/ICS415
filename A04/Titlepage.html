@@ -1,35 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:padding="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Alfred's Site</title>
 </head>
+
+
 <body>
+
+<!-- This is a style tag to make for the table-->
 <style>
-    table, th, tr , td
+
+
+
+    .tab
     {
-        border: 1px solid black;
+        margin-left: 1cm;
     }
+
+    p.padding1
+    {
+        padding:0cm 0cm 0cm 0.5cm;
+    }
+
+    p.padding2
+    {
+        padding:0cm 0cm 0cm 1.5cm;
+    }
+
+    table.padding1
+    {
+        padding:0cm 0cm 0cm 0.5cm;
+    }
+
 </style>
 
-<table style="width:100%">
 
+<!-- Beginning of the table tag-->
+<table style="width:100%" border="1">
 
+    <!-- Table Head-->
     <thead>
-    <th>
+    <th colspan="2">
         <p align="center">
         <h1>Alfred's Website</h1>
         <p>
     </th>
-    </thead>
 
+    </thead>
+    <!-- End of table Head-->
+
+
+    <!-- Table Foot-->
     <tfoot>
 
-        <td align="center"> <h6> Copyright (C) Alfred Chan</h6></td>
+        <td align="center" colspan="2"> <h6> Copyright (C) Alfred Chan</h6></td>
 
     </tfoot>
+    <!-- End of Table Foot -->
+
+    <!-- Meat of the Table-->
+    <tbody>
+
+        <td colspan="2">
+            <a href="Titlepage.html">Home </a>
+            <a href="Formpage.html"> Forms</a>
+        </td>
 
 
+        <tr>
+            <td align="center" width="25%" valign="top">
+                <b>Summary Window</b>
+                <p> HTML supports tables</p>
+                <p>HTML support three different types of lists: unordered, ordered, and description. </p>
+            </td>
+
+
+
+            <td>
+                <b>Home Page</b>
+                <p></p>
+                <p>Tables:</p>
+                <p></p>
+                <p class="padding1">Borderless Table</p>
+
+                <!-- Borderless table-->
+                <table class="padding1" BORDER=0 colspan="2">
+                    <th>
+                        <thead><td align="center" padding="1cm"><b><h7>Header1</h7><b/></td></thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Row 1, Col1</td>
+                            </tr>
+                        </tbody>
+                    </th>
+                </table>
+                <!-- End of Borderless table-->
+
+                <p></p>
+                <span class="tab">Bordered Table</span>
+
+                <!-- Bordered Table-->
+                <table BORDER="1" colspan="2">
+
+                    <thead>
+                        <td align="center"><b>   Header1</b></td>
+                        <td align="center"><b>Header2</b></td>
+                    </thead>
+
+                    <tfoot>
+                         <td align="center">Footer1</td>
+                         <td align="center">Footer1</td>
+                    </tfoot>
+
+                    <tbody>
+                        <tr>
+                            <td>Row1, Col1</td>
+                            <td>Row1, Col2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Row2, Col1</td>
+                            <td>Row2, Col2</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <!-- End of Bordered Table-->
+
+                <p>Lists:</p>
+
+                <!--  Unordered list-->
+                <ul>
+                    <li>Coffee</li>
+                    <li>Milk</li>
+                </ul>
+                <!--End of Unordered list-->
+                <p></p>
+
+                <!--Ordered list-->
+                <ol>
+                    <li>Coffee</li>
+                    <li>Milk</li>
+                </ol>
+                <!--End of Unordered list-->
+
+
+                <br>Coffee
+                <br><span class="tab">black hot drink</span>
+
+                <br>Milk
+                <br><span class="tab">White cold drink</span>
+
+                <p>The web page has a two column layout with header, navigation bar, and footer. There is a fairly large header, narrow navigation bar.</p>
+
+                <p>The main section of the website takes up to 75% of page. The left sidebar is centered aligned.</p>
+
+            </td>
+        </tr>
+
+
+    </tbody>
 
 </table>
 
