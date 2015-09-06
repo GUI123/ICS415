@@ -1,0 +1,44 @@
+header.beginning
+{
+    width: 100%;
+    height: 25%;
+    text-align: center;
+}
+
+
+nav
+{
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    width:100%;
+    height: 50px;
+}
+
+#sidebar
+{
+    border-right: 1px solid;
+    width:25%;
+    height: 450px;
+    float:left;
+}
+
+.foot
+{
+    clear: left;
+    width:100%;
+    border-top:1px blue solid;
+    border-bottom:1px blue solid;
+    height: 50px;
+}
+
+br
+{
+    min-height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#content
+{
+    float: left;
+}
