@@ -1,0 +1,43 @@
+.header
+{
+    border-bottom: solid 1px green;
+    height: 25%;
+    margin-bottom: 20px;
+}
+
+h2
+{
+    text-align: center;
+}
+
+nav
+{
+    height: 50px;
+}
+
+.sidebar
+{
+    width: 25%;
+    height: 60vh;
+    border-right: red 1px solid;
+}
+
+.mainContent
+{
+    width: 70%;
+    height: 60vh;
+    border : dotted 1px blue;
+    margin-left: 5%;
+}
+
+#foot
+{
+    height: 50px;
+    margin-top:64vh;
+    text-align: center;
+}
+
+body
+{
+    background-image: url("startbootstrap-grayscale-1.0.4/img/downloads-bg.jpg");
+}
