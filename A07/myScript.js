@@ -82,6 +82,67 @@ function addClass(elem, className)
 
 function validateForm()
 {
-    var password=document.getElementById("confirm");
-    var confirmpassword;
+    var username=document.forms["myForm"]["name"].value;
+    var email=document.forms["myForm"]["email"].value;
+    var originalPassword=document.forms["myForm"]["password"].value;
+    var confirmPassword=document.forms["myForm"]["confirm"].value;
+    var errorMessage=" ";
+    var boolean=true;
+
+    //Checks for errors
+    if(username=="")
+    {
+        document.getElementById("username").style.backgroundColor="red";
+        errorMessage=errorMessage+"No userName<br>";
+        boolean=false;
+    }
+    else
+    {
+        document.getElementById("username").style.backgroundColor="white";
+    }
+
+    if(email=="")
+    {
+        document.getElementById("email").style.backgroundColor="red";
+        errorMessage=errorMessage+"No email<br>";
+        boolean=false;
+    }
+    else
+    {
+        document.getElementById("email").style.backgroundColor="white";
+    }
+
+
+    if(originalPassword!=confirmPassword)
+    {
+        document.getElementById("password").style.backgroundColor="red";
+        document.getElementById("confirm").style.backgroundrColor="red";
+        errorMessage=errorMessage+"Passwords do not match<br>";
+        boolean=false;
+    }
+    else
+    {
+        document.getElementById("password").style.backgroundColor="white";
+        document.getElementById("confirm").style.backgroundrColor="white";
+    }
+
+
+    if(originalPassword==""||confirmPassword=="")
+    {
+        document.getElementById("password").style.backgroundColor="red";
+        document.getElementById("confirm").style.backgroundColor="red";
+        errorMessage=errorMessage+"Enter a password";
+        boolean=false;
+    }
+    else if(orginalPassword!=""&&confirmPassword!=""&&originalPassword==""&&confirmPassword=="")
+    {
+        document.getElementById("password").style.backgroundColor="white";
+        document.getElementById("confirm").style.backgroundrColor="white";
+    }
+
+
+    document.getElementById("formTester").innerHTML=errorMessage;
+
+    return boolean;
+
 }

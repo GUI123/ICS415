@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>AO7's website</title>
 </head>
 <body>
-
+<p id="formTester"> Form Tester HERE</p>
 <form name="myForm" action="demo_form.html" onsubmit="return validateForm()" method="get">
     <div class="form-group">
         <label for=”username”>User name: </label>
@@ -29,17 +29,23 @@
 
 
     <!--Testers-->
+    <div>Tests the getClasses method, should return the name of the class in the button below. Result should be ["one"].</div>
     <button class="one" onclick="getClasses(this)">
         <label>One class</label>
     </button>
     <br><br>
+
+    <div>Tests the getClasses method, should return the names of the class in the button below. Result should be ["one","two"].</div>
     <button class="one two" onclick="getClasses(this)">
         <label>Two classes</label>
     </button>
     <br><br>
 
-    <button class="Hello" onclick="addClass(this,'World!')" onmouseover="getClasses(this)">
-        <label>No classes</label>
+    <div>Tests the addClass method, should return ["Hello"] on the first click then ["Hello","World!"] on the second click.</div>
+    <button class="Hello" onclick="addClass(this,'World!')"  onmouseup="getClasses(this)" id="noClass">
+        <label>Add Class</label>
+    </button>
+
     </button>
     <br><br>
     <div id="output">RESULT HERE</div>
