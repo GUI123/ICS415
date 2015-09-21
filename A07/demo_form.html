@@ -23,9 +23,30 @@
         <label for=”confirm”>Confirm Password: </label>
         <input type="password" name="confirm" id="confirm">
     </div>
-    <input type="submit" value="Submit" onclick="getClasses(div)">
+    <input type="submit" value="Submit">
+
+    <br><br><br>
+
+
+    <!--Testers-->
+    <button class="one" onclick="getClasses(this)">
+        <label>One class</label>
+    </button>
+    <br><br>
+    <button class="one two" onclick="getClasses(this)">
+        <label>Two classes</label>
+    </button>
+    <br><br>
+
+    <button class="Hello" onclick="addClass(this,'World!')" onmouseover="getClasses(this)">
+        <label>No classes</label>
+    </button>
+    <br><br>
+    <div id="output">RESULT HERE</div>
+
 
     <script src="myScript.js"></script>
+
 </form>
 
 </body>
