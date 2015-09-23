@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <title>w5c1's Website</title>
+    <style>
+        .sidebar
+        {
+            width: 25%;
+            height: 60vh;
+            border-right: red 1px solid;
+        }
+
+        .mainContent
+        {
+            height: 60vh;
+            border : dotted 1px blue;
+            margin-left: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panel panel-default" align="center">
+        <div class="panel-heading">
+            w5c2's Website
+        </div>
+        <div class="panel-body">MainContent</div>
+
+        <br><br>
+        <div style="background: cornflowerblue; height: 100px; width:100px" id="blueBox"></div><br>
+        <div class="panel-footer">Alfred Chan (C) Copyright</div>
+    </div>
+
+    <p align="center">
+    <button type="button" id="show">
+        <label>Now you see us</label>
+    </button>
+
+    <button type="button" id="hide">
+        <label>Now you don't</label>
+    </button>
+    </p>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function () {
+                $("div").hide();
+                $.get("getPage",function(data,status)
+                {
+                    alert("Data: "+data+"\nstatus: "+status);
+                });
+            });
+            $("#show").click(function () {
+                $("div").show();
+                $.post("postPage",function(data,status)
+                {
+                   alert("Data: "+data+"\nstatus: "+status);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
